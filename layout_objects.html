@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Layout Objects &mdash; crispy-tailwind 0.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example Images" href="examples.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> crispy-tailwind
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Layout Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#crispy-forms-layout">crispy_forms.layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#layout">Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#column">Column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#row">Row</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#field">Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#div">Div</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html">HTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hidden">Hidden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fieldset">Fieldset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tbc">TBC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#crispy-forms-bootstrap">crispy_forms.bootstrap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#field-with-buttons">Field With Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inline-field">Inline Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepended-and-appended">Prepended and Appended</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#crispy-tailwind-layout">crispy_tailwind.layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#buttons">Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alert">Alert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">crispy-tailwind</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Layout Objects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/layout_objects.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="layout-objects">
+<h1>Layout Objects<a class="headerlink" href="#layout-objects" title="Permalink to this heading">¶</a></h1>
+<p>This template pack renders Django widgets with the Tailwind CSS framework. This
+page shows examples of how these widgets look when rendered with the default
+styling. For these objects we have given an opinion on how they should look.</p>
+<p>If you are using the <code class="docutils literal notranslate"><span class="pre">|crispy</span></code> filter the form will be styled using the
+default layout. If you wish to customise the form you can use <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">crispy</span> <span class="pre">%}</span></code>
+tags and <code class="docutils literal notranslate"><span class="pre">FormHelper</span></code> to control the layout of your form.</p>
+<p>Wherever possible layout objects are used from <code class="docutils literal notranslate"><span class="pre">crispy-forms</span></code> itself (either
+core or bootstrap). Where these can not be used Tailwind versions are included
+within this template pack. This means that the layout objects may be found
+within one of three files.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">crispy_forms.layout</span></code> (<code class="docutils literal notranslate"><span class="pre">Layout</span></code> and other standard objects)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crispy_forms.bootstrap</span></code> (Some bootstrap objects work out of the box, so we
+will use these)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crispy_tailwind.layout</span></code> (Customised versions for Tailwind are found here)</p></li>
+</ul>
+<p>Knowledge for crispy-forms <code class="docutils literal notranslate"><span class="pre">Layout</span></code> class is assumed. Please see
+<a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html">https://django-crispy-forms.readthedocs.io/en/latest/layouts.html</a> for further
+information.</p>
+<section id="crispy-forms-layout">
+<h2>crispy_forms.layout<a class="headerlink" href="#crispy-forms-layout" title="Permalink to this heading">¶</a></h2>
+<section id="layout">
+<h3>Layout<a class="headerlink" href="#layout" title="Permalink to this heading">¶</a></h3>
+<p>The core <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#fundamentals">Layout</a> class which provides the ability to control the rendering of your form. This is the parent which will
+wrap individual layout objects.</p>
+</section>
+<section id="column">
+<h3>Column<a class="headerlink" href="#column" title="Permalink to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Column">Column</a> layout object wraps fields in a <code class="docutils literal notranslate"><span class="pre">div</span></code> so it can be used as a
+column. The Tailwind template adds no css class to this wrapper by default. If
+required classes can be added:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Column</span><span class="p">(</span><span class="s1">&#39;form_field_1&#39;</span><span class="p">,</span> <span class="s1">&#39;form_field_2&#39;</span><span class="p">,</span> <span class="n">css_class</span><span class="o">=</span><span class="s1">&#39;additional classes&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</section>
+<section id="row">
+<h3>Row<a class="headerlink" href="#row" title="Permalink to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Row">Row</a> layout object wraps fields in a <code class="docutils literal notranslate"><span class="pre">div</span></code> so it can be used as a
+row. The Tailwind template adds <code class="docutils literal notranslate"><span class="pre">flex</span> <span class="pre">flex-row</span></code> to this wrapper by default.
+If required this default can be replaced by custom css classes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Row</span><span class="p">(</span><span class="s1">&#39;form_field_1&#39;</span><span class="p">,</span> <span class="s1">&#39;form_field_2&#39;</span><span class="p">,</span> <span class="n">css_class</span><span class="o">=</span><span class="s1">&#39;additional classes&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>Row and Column layouts are typically used together. Here is an example layout
+with an image showing how the form is rendered:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Row</span><span class="p">(</span>
+  <span class="n">Column</span><span class="p">(</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;first_name&quot;</span><span class="p">),</span> <span class="n">Field</span><span class="p">(</span><span class="s2">&quot;last_name&quot;</span><span class="p">),</span> <span class="n">css_class</span><span class="o">=</span><span class="s2">&quot;px-2&quot;</span><span class="p">),</span>
+  <span class="n">Column</span><span class="p">(</span><span class="s2">&quot;email&quot;</span><span class="p">,</span> <span class="n">css_class</span><span class="o">=</span><span class="s2">&quot;px-2&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/row_col.png"><img alt="_images/row_col.png" src="_images/row_col.png" style="width: 50%;" /></a>
+</section>
+<section id="field">
+<h3>Field<a class="headerlink" href="#field" title="Permalink to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Field">Field</a> layout object allows attributes to be easily added to a single
+field.</p>
+</section>
+<section id="div">
+<h3>Div<a class="headerlink" href="#div" title="Permalink to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Div">Div</a> layout object wraps fields in a <cite>Div</cite>. No classes are added by default.</p>
+</section>
+<section id="html">
+<h3>HTML<a class="headerlink" href="#html" title="Permalink to this heading">¶</a></h3>
+<p>Used to render pure HTML code and behaves like a Django template. See the django-crispy-forms <a class="reference internal" href="#id6">HTML</a> docs for more
+information.</p>
+<p>The <a class="reference internal" href="#id6">HTML</a>: <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html">https://django-crispy-forms.readthedocs.io/en/latest/layouts.html</a>?#universal-layout-objects</p>
+</section>
+<section id="hidden">
+<span id="id6"></span><h3>Hidden<a class="headerlink" href="#hidden" title="Permalink to this heading">¶</a></h3>
+<p>Used to create a <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Hidden">hidden</a> input.</p>
+</section>
+<section id="fieldset">
+<h3>Fieldset<a class="headerlink" href="#fieldset" title="Permalink to this heading">¶</a></h3>
+<p>Wraps fields in a <code class="docutils literal notranslate"><span class="pre">&lt;fieldset&gt;</span></code>. The first parameter is the legend for the
+fieldset. By default the class for the legend is
+<code class="docutils literal notranslate"><span class="pre">block</span> <span class="pre">text-gray-700</span> <span class="pre">font-bold</span> <span class="pre">mb-2</span></code>. Below is an example layout and the
+default rendering:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fieldset</span><span class="p">(</span><span class="s2">&quot;Text for the legend&quot;</span><span class="p">,</span> <span class="s2">&quot;is_company&quot;</span><span class="p">,</span> <span class="s2">&quot;email&quot;</span><span class="p">,)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/fieldset.png"><img alt="_images/fieldset.png" src="_images/fieldset.png" style="width: 50%;" /></a>
+<p>If you wish to customise the legend please over ride the template. See the
+<a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#overriding-layout-objects-templates">over riding layout objects templates</a> docs for guidance on how to do this.</p>
+</section>
+<section id="tbc">
+<h3>TBC<a class="headerlink" href="#tbc" title="Permalink to this heading">¶</a></h3>
+<p>Multifield, MultiWidgetField</p>
+</section>
+</section>
+<section id="crispy-forms-bootstrap">
+<h2>crispy_forms.bootstrap<a class="headerlink" href="#crispy-forms-bootstrap" title="Permalink to this heading">¶</a></h2>
+<p>The following objects can be imported from <code class="docutils literal notranslate"><span class="pre">crispy_forms.boostrap</span></code>.</p>
+<section id="field-with-buttons">
+<h3>Field With Buttons<a class="headerlink" href="#field-with-buttons" title="Permalink to this heading">¶</a></h3>
+<p>An oppinionated field with buttons template is provided with the template
+pack. If you wish to customise this layout object you can
+<a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#overriding-layout-objects-templates">over ride templates</a>.</p>
+<a class="reference internal image-reference" href="_images/field_with_buttons.png"><img alt="_images/field_with_buttons.png" src="_images/field_with_buttons.png" style="width: 35%;" /></a>
+</section>
+<section id="inline-field">
+<h3>Inline Field<a class="headerlink" href="#inline-field" title="Permalink to this heading">¶</a></h3>
+<p>An oppinionated inline field. If you wish to customise this layout object you
+can <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#overriding-layout-objects-templates">over ride templates</a>.</p>
+<a class="reference internal image-reference" href="_images/inline_field.png"><img alt="_images/inline_field.png" src="_images/inline_field.png" style="width: 35%;" /></a>
+</section>
+<section id="prepended-and-appended">
+<h3>Prepended and Appended<a class="headerlink" href="#prepended-and-appended" title="Permalink to this heading">¶</a></h3>
+<p>The three layout objects which allow for prepended and appended inputs are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PrependedText</span></code>. First argument is the field name, the second is the
+prepended text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AppendedText</span></code>. First argument is the field name, the second is the
+appended text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PrependedAppendedText</span></code>. A combined prepended and appended text. The first
+parameter is the name of the field, then second is the prepended text and
+thirdly the appended text.</p></li>
+</ul>
+<p>The image below shows examples of how these are rendered with the template
+provided with <code class="docutils literal notranslate"><span class="pre">crispy-tailwind</span></code>. If you wish to customise these then you
+will need to <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#overriding-layout-objects-templates">over ride templates</a>.</p>
+<a class="reference internal image-reference" href="_images/prepended.png"><img alt="_images/prepended.png" src="_images/prepended.png" style="width: 50%;" /></a>
+<p>See the <code class="docutils literal notranslate"><span class="pre">crispy-forms</span></code> <a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#bootstrap-layout-objects">Prepended</a> docs for more information on how to use
+these fields.</p>
+<p>Note: the active argument does not have any impact on the <code class="docutils literal notranslate"><span class="pre">crispy-tailwind</span></code>
+template pack.</p>
+</section>
+</section>
+<section id="crispy-tailwind-layout">
+<h2>crispy_tailwind.layout<a class="headerlink" href="#crispy-tailwind-layout" title="Permalink to this heading">¶</a></h2>
+<p>The following layout objects can be imported from <code class="docutils literal notranslate"><span class="pre">crispy_tailwind.layout</span></code>.</p>
+<section id="buttons">
+<h3>Buttons<a class="headerlink" href="#buttons" title="Permalink to this heading">¶</a></h3>
+<p>The three Buttons (<code class="docutils literal notranslate"><span class="pre">Button</span></code>, <code class="docutils literal notranslate"><span class="pre">Reset</span></code> and <code class="docutils literal notranslate"><span class="pre">Submit</span></code>) from <code class="docutils literal notranslate"><span class="pre">crispy-forms</span></code>
+have been customised for the Tailwind template pack. Below is an example form
+layout with an image showing how it is rendered:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">form</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
+    <span class="n">ButtonHolder</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="s2">&quot;Button&quot;</span><span class="p">),</span> <span class="n">Submit</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="s2">&quot;Submit&quot;</span><span class="p">,),</span> <span class="n">Reset</span><span class="p">(</span><span class="s2">&quot;cancel&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/Buttons.png"><img alt="_images/Buttons.png" src="_images/Buttons.png" style="height: 35px;" /></a>
+<p>The three buttons have default classes applied to them. The buttons can all be
+customised by adding css_classes to these layout objects. The following layout
+renders a single customised <code class="docutils literal notranslate"><span class="pre">Submit</span></code> button:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">form</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">Submit</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="s2">&quot;Submit&quot;</span><span class="p">,</span> <span class="n">css_class</span><span class="o">=</span><span class="s2">&quot;bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/custom_button.png"><img alt="_images/custom_button.png" src="_images/custom_button.png" style="height: 35px;" /></a>
+</section>
+<section id="alert">
+<h3>Alert<a class="headerlink" href="#alert" title="Permalink to this heading">¶</a></h3>
+<p>Renders an alert message box:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">form</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
+    <span class="n">Alert</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="s2">&quot;&lt;strong&gt;Warning!&lt;/strong&gt; Here&#39;s a test message.&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/alert.png"><img alt="_images/alert.png" src="_images/alert.png" style="height: 50px;" /></a>
+<p>The <code class="docutils literal notranslate"><span class="pre">css_class</span></code> argument can be used to change the default classes on the
+wrapping <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>, this allows simple changes to the alert style (e.g. colour)
+.</p>
+<p>By default alerts have a close button. To disable, set <code class="docutils literal notranslate"><span class="pre">dismiss</span></code> to
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>In addition the variety of alerts possible with Tailwind is wide and but may
+require a different HTML layout. In this case you may find is useful to over
+ride the <code class="docutils literal notranslate"><span class="pre">alert.html</span></code> template. See the crispy-forms docs on how to
+<a class="reference external" href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#overriding-layout-objects-templates">over ride templates</a> for more information.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="examples.html" class="btn btn-neutral float-right" title="Example Images" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, David Smith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

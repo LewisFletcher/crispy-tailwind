@@ -1,0 +1,230 @@
+==============
+Layout Objects
+==============
+
+This template pack renders Django widgets with the Tailwind CSS framework. This
+page shows examples of how these widgets look when rendered with the default
+styling. For these objects we have given an opinion on how they should look.
+
+If you are using the ``|crispy`` filter the form will be styled using the
+default layout. If you wish to customise the form you can use ``{% crispy %}``
+tags and ``FormHelper`` to control the layout of your form.
+
+Wherever possible layout objects are used from ``crispy-forms`` itself (either
+core or bootstrap). Where these can not be used Tailwind versions are included
+within this template pack. This means that the layout objects may be found
+within one of three files.
+
+- ``crispy_forms.layout`` (``Layout`` and other standard objects)
+- ``crispy_forms.bootstrap`` (Some bootstrap objects work out of the box, so we
+  will use these)
+- ``crispy_tailwind.layout`` (Customised versions for Tailwind are found here)
+
+Knowledge for crispy-forms ``Layout`` class is assumed. Please see
+https://django-crispy-forms.readthedocs.io/en/latest/layouts.html for further
+information.
+
+crispy_forms.layout
+===================
+
+Layout
+------
+
+The core Layout_ class which provides the ability to control the rendering of your form. This is the parent which will
+wrap individual layout objects.
+
+.. _Layout: https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#fundamentals
+
+Column
+------
+
+The Column_ layout object wraps fields in a ``div`` so it can be used as a
+column. The Tailwind template adds no css class to this wrapper by default. If
+required classes can be added::
+
+  Column('form_field_1', 'form_field_2', css_class='additional classes',)
+
+.. _column: https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Column
+
+Row
+---
+
+The Row_ layout object wraps fields in a ``div`` so it can be used as a
+row. The Tailwind template adds ``flex flex-row`` to this wrapper by default.
+If required this default can be replaced by custom css classes::
+
+  Row('form_field_1', 'form_field_2', css_class='additional classes',)
+
+Row and Column layouts are typically used together. Here is an example layout
+with an image showing how the form is rendered::
+
+  Row(
+    Column(Field("first_name"), Field("last_name"), css_class="px-2"),
+    Column("email", css_class="px-2"),
+  )
+
+.. image:: img/row_col.png
+    :width: 50%
+
+.. _Row : https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Row
+
+Field
+-----
+
+The Field_ layout object allows attributes to be easily added to a single
+field.
+
+.. _Field: https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Field
+
+Div
+---
+
+The Div_ layout object wraps fields in a `Div`. No classes are added by default.
+
+.. _Div: https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Div
+
+HTML
+----
+
+Used to render pure HTML code and behaves like a Django template. See the django-crispy-forms HTML_ docs for more
+information.
+
+The HTML_: https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#universal-layout-objects
+
+.. _HTML:
+
+Hidden
+------
+
+Used to create a hidden_ input.
+
+.. _Hidden: https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Hidden
+
+Fieldset
+--------
+
+Wraps fields in a ``<fieldset>``. The first parameter is the legend for the
+fieldset. By default the class for the legend is
+``block text-gray-700 font-bold mb-2``. Below is an example layout and the
+default rendering::
+
+  Fieldset("Text for the legend", "is_company", "email",)
+
+.. image:: img/fieldset.png
+    :width: 50%
+
+If you wish to customise the legend please over ride the template. See the
+`over riding layout objects templates`_ docs for guidance on how to do this.
+
+.. _`over riding layout objects templates`: https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#overriding-layout-objects-templates
+.. _Fieldset: https://django-crispy-forms.readthedocs.io/en/latest/api_layout.html?#layout.Fieldset
+
+TBC
+---
+Multifield, MultiWidgetField
+
+crispy_forms.bootstrap
+======================
+
+The following objects can be imported from ``crispy_forms.boostrap``.
+
+Field With Buttons
+------------------
+
+An oppinionated field with buttons template is provided with the template
+pack. If you wish to customise this layout object you can
+`over ride templates`_.
+
+.. image:: img/field_with_buttons.png
+    :width: 35%
+
+Inline Field
+------------
+
+An oppinionated inline field. If you wish to customise this layout object you 
+can `over ride templates`_.
+
+.. image:: img/inline_field.png
+    :width: 35%
+
+Prepended and Appended
+----------------------
+
+The three layout objects which allow for prepended and appended inputs are:
+
+- ``PrependedText``. First argument is the field name, the second is the
+  prepended text.
+- ``AppendedText``. First argument is the field name, the second is the
+  appended text.
+- ``PrependedAppendedText``. A combined prepended and appended text. The first
+  parameter is the name of the field, then second is the prepended text and
+  thirdly the appended text.
+
+The image below shows examples of how these are rendered with the template
+provided with ``crispy-tailwind``. If you wish to customise these then you
+will need to `over ride templates`_.
+
+.. image:: img/prepended.png
+    :width: 50%
+
+See the ``crispy-forms`` Prepended_ docs for more information on how to use
+these fields.
+
+Note: the active argument does not have any impact on the ``crispy-tailwind``
+template pack.
+
+.. _Prepended: https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#bootstrap-layout-objects
+
+crispy_tailwind.layout
+======================
+
+The following layout objects can be imported from ``crispy_tailwind.layout``.
+
+Buttons
+-------
+
+The three Buttons (``Button``, ``Reset`` and ``Submit``) from ``crispy-forms``
+have been customised for the Tailwind template pack. Below is an example form
+layout with an image showing how it is rendered::
+
+  form.helper.layout = Layout(
+      ButtonHolder(Button("button", "Button"), Submit("submit", "Submit",), Reset("cancel", "Cancel"))
+  )
+
+.. image:: img/Buttons.png
+   :height: 35px
+
+The three buttons have default classes applied to them. The buttons can all be
+customised by adding css_classes to these layout objects. The following layout
+renders a single customised ``Submit`` button::
+
+  form.helper.layout = Layout(Submit("submit", "Submit", css_class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"))
+
+.. image:: img/custom_button.png
+   :height: 35px
+
+Alert
+-----
+
+Renders an alert message box::
+
+        form.helper.layout = Layout(
+            Alert(content="<strong>Warning!</strong> Here's a test message.")
+        )
+
+.. image:: img/alert.png
+  :height: 50px
+
+The ``css_class`` argument can be used to change the default classes on the
+wrapping ``<div>``, this allows simple changes to the alert style (e.g. colour)
+.
+
+By default alerts have a close button. To disable, set ``dismiss`` to
+``false``.
+
+In addition the variety of alerts possible with Tailwind is wide and but may
+require a different HTML layout. In this case you may find is useful to over
+ride the ``alert.html`` template. See the crispy-forms docs on how to
+`over ride templates`_ for more information.
+
+.. _over ride templates: https://django-crispy-forms.readthedocs.io/en/latest/layouts.html?#overriding-layout-objects-templates
